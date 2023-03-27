@@ -10,3 +10,5 @@ Comands:
 1. docker-compose up -d --build
 
 Example: curl -H 'Own-Auth-UserName:user1' localhost:5000/current/city=Murmansk
+
+Down: docker-compose down --remove-orphans 
