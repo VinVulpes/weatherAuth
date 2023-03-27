@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  auth:
+    build: ./auth_server
+    ports:
+      - 9000:9000
+  weather_2:
+    build: ./flask_docker_2/webapp
+    ports:
+      - 5000:5000

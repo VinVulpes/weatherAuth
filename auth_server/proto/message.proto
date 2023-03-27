@@ -1,0 +1,19 @@
+syntax = "proto3";
+package api;
+option go_package = "./api";
+
+// Сервис авторизации
+service AuthService {
+  // Метод для проверки авторизации пользователя
+  rpc CheckAuthorization (AuthRequest) returns (AuthResponse) {}
+}
+
+// Сообщение для запроса авторизации
+message AuthRequest {
+  string user_name = 1; // Имя пользователя
+}
+
+// Сообщение с результатом проверки авторизации
+message AuthResponse {
+  bool is_authorized = 1; // Результат проверки авторизации
+}
